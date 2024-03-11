@@ -117,7 +117,7 @@ const LoaderWrapper = styled.div`
 function Freelances() {
   const { theme } = useTheme()
   const { data, isLoading, error } = useFetch(
-    `http://localhost:8000/freelances`
+    `https://api-deployed-react-shiny-agency.onrender.com/freelances`
   )
 
   const freelancersList = data?.freelancersList

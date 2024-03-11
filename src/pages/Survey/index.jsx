@@ -65,7 +65,7 @@ function Survey() {
         saveAnswers({ [questionNumber]: answer })
       }
 
-      const { data, isLoading,error } = useFetch(`http://localhost:8000/survey`)
+      const { data, isLoading,error } = useFetch(`https://api-deployed-react-shiny-agency.onrender.com/survey`)
 
       const { surveyData } = data
 

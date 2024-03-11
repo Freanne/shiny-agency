@@ -92,7 +92,7 @@ function Results() {
   const queryParams = formatQueryParams(answers)
 
   const { data, isLoading, error } = useFetch(
-    `http://localhost:8000/results?${queryParams}`
+    `https://api-deployed-react-shiny-agency.onrender.com/results/?${queryParams}`
   )
 
   if (error) {
