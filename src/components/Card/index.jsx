@@ -5,7 +5,7 @@ import { useTheme } from '../../utils/hooks'
 
 const CardLabel = styled.span`
     
-    color: ${({ theme }) => (theme === 'light' ? '#' : '#ffffff')};
+    color: ${({ theme }) => (theme === 'light' ? '#5843E4' : '#ffffff')};
     
     font-size: 22px;
     font-weight: bold;
