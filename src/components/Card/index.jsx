@@ -1,24 +1,41 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import colors from '../../utils/style/color'
+import { useTheme } from '../../utils/hooks'
 
 const CardLabel = styled.span`
-    color: #5843e4;
+    
+    color: ${({ theme }) => (theme === 'light' ? '#' : '#ffffff')};
+    
     font-size: 22px;
     font-weight: bold;
+    justify-self: center;
+    text-align: center;
+    margin-bottom: 15px;
+   
 `
 const CardImage = styled.img`
     height: 80px;
     width: 80px;
     border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 15px;
+
+`
+const CardTitle = styled.span`
+    justify-self: center;
+    text-align:center;
+    color: ${({ theme }) => theme === 'light' ? '#000000' : '#ffffff'};
 `
 const CardWrapper = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction : column;
     padding: 15px;
-    background-color: ${colors.backgroundLight};
+    background-color: ${({ theme }) =>
+    theme === 'light' ? colors.backgroundLight : colors.backgroundDark};
     border-radius: 30px;
-    width: 350px;
+    width: 300px;
     transition: 200ms;
     &:hover {
         cursor: pointer;
@@ -26,11 +43,12 @@ const CardWrapper = styled.div`
     }
 `
 function Card({ label, title, picture }) {
+    const {theme} = useTheme()
     return (
-        <CardWrapper style={{ display: 'flex', flexDirection: 'column', padding: 15 }}>
-            <CardLabel>{label}</CardLabel>
-            <CardImage src={picture} alt="freelance" height={80} width={80} />
-            <span>{title}</span>
+        <CardWrapper theme={theme}>
+            <CardLabel theme={theme}>{label}</CardLabel>
+            <CardImage src={picture} alt="freelance" />
+            <CardTitle theme={theme}>{title}</CardTitle>
         </CardWrapper>
     )
 }

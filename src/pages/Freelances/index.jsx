@@ -106,7 +106,7 @@ const PageSubtitle = styled.h2`
   font-weight: 300;
   text-align: center;
   padding-bottom: 30px;
-  color: ${({ theme }) => (theme === 'light' ? '#000000' : '#ffffff')};
+  color: ${({ theme }) => theme === 'light' ? '#000000' : '#ffffff'};
 `
 
 const LoaderWrapper = styled.div`
