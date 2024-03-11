@@ -80,7 +80,7 @@ function Home() {
   return (
     <HomeWrapper theme={theme}>
       <HomerContainer theme={theme}>
-        <LeftCol>
+        <LeftCol theme={theme}>
           <StyledTitle>
             Repérez vos besoins, on s’occupe du reste, avec les meilleurs
             talents
