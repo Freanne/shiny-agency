@@ -17,7 +17,7 @@ backgroundColor:"#F9F9FC",
 alignContent:"center", 
 paddingTop:" 100px ", fontSize:"30px", 
 fontFamily:"Trebuchet MS"}}>
-    {sum(40, 2)}
+    
              <div style={{paddingLeft:"70px ", paddingTop:"60px"}}>
                  <h2> Répérer vos besoins,<br /> on s'occupe du reste, <br />avec les meilleurs talents </h2>
                  <StyledLink to = "/survey/1" $isFullLink>

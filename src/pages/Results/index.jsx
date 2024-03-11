@@ -1,19 +1,3 @@
-// import { SurveyContext } from "../../utils/context"
-// import { useContext } from "react"
-
-// function Results(){
-//     const { answers } = useContext(SurveyContext)
-//     console.log(answers)
-
-//     return(
-//     <div>
-//         <h1> </h1>
-//     </div>
-//     )
-// }
-// export default Results
-
-
 import { useContext } from 'react'
 import { SurveyContext } from '../../utils/context'
 import styled from 'styled-components'
