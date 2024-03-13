@@ -138,14 +138,15 @@ function Freelances() {
           <Loader theme={theme} />
         </LoaderWrapper>
       ) : (
-        <CardsContainer>
+      <CardsContainer>
           {freelancersList?.map((profile) => (
-            <Link key={`freelance-${profile.id}`} to={`/profile/${profile.id}`}>
+            <Link key={`freelance-${profile.id}`} to={`/profile/${profile.id}`} style={{textDecoration: "none"}}>
             <Card
               
               label={profile.job}
               title={profile.name}
               picture={profile.picture}
+              theme={theme}
             />
             </Link>
           ))}

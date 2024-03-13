@@ -12,16 +12,6 @@ import Footer from './components/Footer'
 import GlobalStyle from './utils/style/GlobalStyle'
 import { SurveyProvider, ThemeProvider } from './utils/context'
 
-// const GlobalStyle = createGlobalStyle`
-//     * {
-//       font-family: 'Trebuchet MS', Helvetica, sans-serif;
-//     }
-
-//     body {
-//       margin: 0;
-//     }
-// `
-
 
 ReactDOM.render(
   <React.StrictMode>
@@ -30,7 +20,7 @@ ReactDOM.render(
         <SurveyProvider>
         <GlobalStyle/>
         <Header />
-       
+      
         <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/survey/:questionNumber' element={<Survey />} />

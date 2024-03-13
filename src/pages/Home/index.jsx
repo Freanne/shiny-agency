@@ -32,11 +32,11 @@
 // }
 
 // export default Home
-import { useContext } from 'react'
+
 import styled from 'styled-components'
 import colors from '../../utils/style/color'
 import StyledLink  from '../../utils/style/atom'
-import { useFetch, useTheme } from '../../utils/hooks'
+import { useTheme } from '../../utils/hooks'
 import HomeIllustration from '../../assets/undraw_Resume_re_hkth 1.png'
 
 const HomeWrapper = styled.div`

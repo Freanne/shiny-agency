@@ -97,8 +97,8 @@ class Profile extends Component {
   componentDidMount() {
     const { id } = this.props
 
-    fetch(`https://api-deployed-react-shiny-agency.onrender.com/freelances?id=${id}`)
-        console.log(`http://api-deployed-react-shiny-agency.onrender.com/freelances?id=${id}`)
+    fetch(`https://api-deployed-react-shiny-agency.onrender.com/freelance?id=${id}`)
+
       .then((response) => response.json())
       .then((jsonResponse) => {
         this.setState({ profileData: jsonResponse?.freelanceData })

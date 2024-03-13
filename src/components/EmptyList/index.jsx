@@ -1,7 +1,7 @@
-import image from "../../assets/undraw_page_not_found_su7k 1.png"
-import { useTheme } from "../../utils/hooks"
-import styled from "styled-components"
-import colors from "../../utils/style/color"
+import { useTheme } from '../../utils/hooks'
+import styled from 'styled-components'
+import colors from '../../utils/style/color'
+import EmptyIllustration from '../../assets/undraw_missed_chances_k3cq 1.svg'
 
 const Container = styled.div`
   display: flex;
@@ -26,17 +26,17 @@ const Illustration = styled.img`
   margin: 30px 0;
 `
 
-function Error(){
-    const {theme} = useTheme()
-    return(
+function EmptyList(params) {
+    const { theme } = useTheme()
+    return (
         <Container theme={theme}>
-            <Title theme={theme}>Oups...</Title>
-            <Illustration src={image} />
+            <Title theme={theme}>Dommage...</Title>
+            <Illustration src={EmptyIllustration} />
             <SubTitle theme={theme}>
-                Il semblerait qu'il y ait un problème
+            Il semblerait que vous n’ayez besoin d’aucune compétence
             </SubTitle>
-        </Container>
+      </Container>
     )
 }
 
-export default Error
+export default EmptyList

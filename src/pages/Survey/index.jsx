@@ -38,8 +38,6 @@ const ReplyBox = styled.button`
 border: none;
 height: 100px;
 width: 200px;
-display: flex;
-flex-direction: column;
 align-items: center;
 justify-content: center;
 background-color: ${({ theme }) =>
@@ -56,6 +54,7 @@ box-shadow: ${(props) =>
   margin-left: px;
 }
 color: ${({ theme }) => theme === 'light' ? '#000000' : '#ffffff'};
+margin-left : 20px;
 `
 
 
@@ -111,9 +110,9 @@ function Survey() {
             </RepplyWrapper>
         )}
             <LinkWrapper theme={theme}>
-                <Link to={`/survey/${prevQuestionNumber}`} style={{margin:"100px"}}>Précédent</Link>
+                <Link to={`/survey/${prevQuestionNumber}`} style={{margin:"30px"}}>Précédent</Link>
                 {surveyData && surveyData[questionNumberInt + 1] ? (
-                    <Link to= {`/survey/${nextQuestionNumber}`}  style={{margin:"100px"}}> Suivante </Link>
+                    <Link to= {`/survey/${nextQuestionNumber}`}  style={{margin:"30px"}}>Suivante</Link>
                     
                 ) : (
                     <Link to="/results" style={{margin:"100px"}}>Résultats</Link>
