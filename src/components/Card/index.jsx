@@ -44,6 +44,7 @@ const CardWrapper = styled.div`
 `
 function Card({ label, title, picture }) {
     const {theme} = useTheme()
+
     return (
         <CardWrapper theme={theme}>
             <CardLabel theme={theme}>{label}</CardLabel>
