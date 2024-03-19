@@ -59,9 +59,9 @@ function Header() {
                 <LinkWrapper theme={theme} className="offcanvas offcanvas-end" id="offcanvasDarkNavbar" aria-labelledby="MenuButton">
                     <button type="button" className="btn-close btn-close-black justify-align-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     <LinkClick theme={theme} className="offcanvas-body" style={{justifyContent:"center", color:"black"}}>
-                        <Link className="nav-item nav-link" to="/" onClick={(event) => handleLinkClick(event, '/')}>Accueil</Link>
-                        <Link className="nav-item nav-link" to="/freelances" onClick={(event) => handleLinkClick(event, '/freelances')}>Profils</Link>
-                        <Link className="nav-item nav-link" to="/survey/1" onClick={(event) => handleLinkClick(event, '/survey/1')}>Faire le test</Link>
+                        <StyledLink  theme={theme} className="nav-item nav-link" to="/" onClick={(event) => handleLinkClick(event, '/')}>Accueil</StyledLink>
+                        <StyledLink theme={theme} className="nav-item nav-link" to="/freelances" onClick={(event) => handleLinkClick(event, '/freelances')}>Profils</StyledLink>
+                        <StyledLink theme={theme} className="nav-item nav-link" to="/survey/1" onClick={(event) => handleLinkClick(event, '/survey/1')}>Faire le test</StyledLink>
                     </LinkClick>
                 </LinkWrapper>
             </div>
