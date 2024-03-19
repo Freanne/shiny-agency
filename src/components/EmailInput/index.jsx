@@ -7,7 +7,8 @@ const InputWrapper = styled.div`
   color: ${({ theme }) => theme === 'light' ? colors.dark : 'white'};
   display: flex;
   flex-direction: column;
-  
+  align-items:center;
+  margin-top:30px;
 `
 
 const StyledLabel = styled.label`
@@ -29,7 +30,7 @@ function EmailInput() {
   const { theme } = useTheme()
 
   return (
-    <InputWrapper theme={theme}>
+    <InputWrapper theme={theme} className=''>
       <StyledLabel theme={theme}>Adresse email</StyledLabel>
       <StyledInput
         theme={theme}

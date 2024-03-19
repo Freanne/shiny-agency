@@ -45,7 +45,7 @@ const HomeWrapper = styled.div`
 `
 
 const HomerContainer = styled.div`
-  margin-top : 10px;
+  margin-top : 30px;
   background-color: ${({ theme }) =>
     theme === 'light' ? colors.backgroundLight : colors.backgroundDark};
   padding: 60px 90px;

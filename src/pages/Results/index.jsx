@@ -10,7 +10,7 @@ const ResultsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top:10px;
+  margin-top:30px;
   padding: 30px;
   background-color: ${({ theme }) =>
     theme === 'light' ? colors.backgroundLight : colors.backgroundDark};
