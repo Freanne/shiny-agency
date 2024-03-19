@@ -7,7 +7,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 60px 90px;
+  text-align:center;
+  margin-top: 10px;
   padding: 30px;
   background-color: ${({ theme }) =>
     theme === 'light' ? colors.backgroundLight : colors.backgroundDark};
@@ -29,12 +30,14 @@ const Illustration = styled.img`
 function Error(){
     const {theme} = useTheme()
     return(
-        <Container theme={theme}>
-            <Title theme={theme}>Oups...</Title>
-            <Illustration src={image} />
-            <SubTitle theme={theme}>
-                Il semblerait qu'il y ait un problème
-            </SubTitle>
+        <Container theme={theme} className="container">
+            <div className="row">
+              <Title theme={theme}>Oups...</Title>
+              <Illustration src={image} />
+              <SubTitle theme={theme}>
+                  Il semblerait qu'il y ait un problème
+              </SubTitle>
+            </div>
         </Container>
     )
 }

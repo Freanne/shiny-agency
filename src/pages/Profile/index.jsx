@@ -5,11 +5,11 @@ import { ThemeContext } from '../../utils/context'
 
 const ProfileWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 90px 0;
-  margin: 0 90px;
+  padding:90px 10px;
+  margin-top : 30px;
   background-color: ${({ theme }) =>
     theme === 'light' ? colors.backgroundLight : colors.backgroundDark};
 `
@@ -120,9 +120,9 @@ class Profile extends Component {
     return (
       <ThemeContext.Consumer>
         {({ theme }) => (
-          <ProfileWrapper theme={theme}>
+          <ProfileWrapper theme={theme} className='container'>
             <Picture src={picture} alt={name} height={150} width={150} />
-            <ProfileDetails theme={theme}>
+            <ProfileDetails theme={theme} className='row'>
               <TitleWrapper>
                 <Title>{name}</Title>
                 <Location>{location}</Location>

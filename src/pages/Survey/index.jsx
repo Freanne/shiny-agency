@@ -33,6 +33,8 @@ color: ${({ theme }) => theme === 'light' ? '#000000' : '#ffffff'};
 `
 
 const RepplyWrapper = styled.div`
+display: flex;
+
 `
 const ReplyBox = styled.button`
 border: none;
@@ -54,7 +56,7 @@ box-shadow: ${(props) =>
   margin-left: px;
 }
 color: ${({ theme }) => theme === 'light' ? '#000000' : '#ffffff'};
-margin-left : 20px;
+margin-left : 5px;
 `
 
 
@@ -91,11 +93,12 @@ function Survey() {
             </QuestionContent>
     )}
         {answers && (
-            <RepplyWrapper theme={theme} >
+            <RepplyWrapper theme={theme} className="container row" >
                 <ReplyBox 
                     onClick={() => saveReply(true)}
                     isSelected={answers[questionNumber] === true}
                     theme={theme}
+                    className="col "
                 >
                     Oui
                 </ReplyBox>
@@ -104,6 +107,7 @@ function Survey() {
                     onClick={() => saveReply(false)}
                     isSelected={answers[questionNumber] === false}
                     theme = { theme }
+                    className="col"
                 >
                     Non 
                 </ReplyBox>
@@ -115,7 +119,7 @@ function Survey() {
                     <Link to= {`/survey/${nextQuestionNumber}`}  style={{margin:"30px"}}>Suivante</Link>
                     
                 ) : (
-                    <Link to="/results" style={{margin:"100px"}}>Résultats</Link>
+                    <Link to="/results" style={{margin:"30px"}}>Résultats</Link>
                 )}
             </LinkWrapper>
             

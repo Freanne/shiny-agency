@@ -10,7 +10,7 @@ const ResultsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 60px 90px;
+  margin-top:10px;
   padding: 30px;
   background-color: ${({ theme }) =>
     theme === 'light' ? colors.backgroundLight : colors.backgroundDark};
@@ -95,7 +95,7 @@ function Results() {
       <Loader />
     </LoaderWrapper>
   ) : (
-    <ResultsContainer theme={theme}>
+    <ResultsContainer theme={theme} className='container'>
       <ResultsTitle theme={theme}>
         Les compétences dont vous avez besoin :
         {resultsData &&
@@ -103,6 +103,7 @@ function Results() {
             <JobTitle
               key={`result-title-${index}-${result.title}`}
               theme={theme}
+              className='row'
             >
               {formatJobList(result.title, resultsData.length, index)}
             </JobTitle>

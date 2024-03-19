@@ -12,6 +12,7 @@ body {
     isDarkMode ? '#2F2E41' : 'white'};
     
     }
+
 `
 
 function GlobalStyle() {

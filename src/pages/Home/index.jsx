@@ -45,7 +45,7 @@ const HomeWrapper = styled.div`
 `
 
 const HomerContainer = styled.div`
-  margin: 30px;
+  margin-top : 10px;
   background-color: ${({ theme }) =>
     theme === 'light' ? colors.backgroundLight : colors.backgroundDark};
   padding: 60px 90px;
@@ -73,19 +73,20 @@ const StyledTitle = styled.h2`
 
 const Illustration = styled.img`
   flex: 1;
+  width:100%;
 `
 
 function Home() {
     const {theme} = useTheme() 
   return (
     <HomeWrapper theme={theme}>
-      <HomerContainer theme={theme}>
-        <LeftCol theme={theme}>
-          <StyledTitle>
+      <HomerContainer theme={theme} className='row'>
+        <LeftCol theme={theme} className='col-12 col-md-6'>
+          <StyledTitle >
             Repérez vos besoins, on s’occupe du reste, avec les meilleurs
             talents
           </StyledTitle>
-          <StyledLink to="/survey/1" $isFullLink>
+          <StyledLink to="/survey/1" className='my-2' $isFullLink>
             Faire le test
           </StyledLink>
         </LeftCol>

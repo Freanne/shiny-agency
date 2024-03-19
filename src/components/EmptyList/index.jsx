@@ -7,7 +7,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 60px 90px;
+  margin-top: 10px;
+  text-align:center;
   padding: 30px;
   background-color: ${({ theme }) =>
     theme === 'light' ? colors.backgroundLight : colors.backgroundDark};
@@ -29,12 +30,15 @@ const Illustration = styled.img`
 function EmptyList(params) {
     const { theme } = useTheme()
     return (
-        <Container theme={theme}>
-            <Title theme={theme}>Dommage...</Title>
+        <Container theme={theme} className='container'>
+          <div className='row'>
+          <Title theme={theme}>Dommage...</Title>
             <Illustration src={EmptyIllustration} />
             <SubTitle theme={theme}>
             Il semblerait que vous n’ayez besoin d’aucune compétence
             </SubTitle>
+          </div>
+
       </Container>
     )
 }
